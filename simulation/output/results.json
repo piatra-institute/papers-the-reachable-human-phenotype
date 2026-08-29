@@ -1,0 +1,340 @@
+{
+  "design": {
+    "designs": {
+      "human_only": {
+        "confusion": [
+          [
+            0.97,
+            0.0,
+            0.03
+          ],
+          [
+            0.965,
+            0.0,
+            0.035
+          ],
+          [
+            0.4475,
+            0.0,
+            0.5525
+          ]
+        ],
+        "recovery_accuracy": 0.5075,
+        "congruent_recovered": 0.0,
+        "n_per_group": 60,
+        "n_reps": 400
+      },
+      "human_plus_generic": {
+        "confusion": [
+          [
+            0.965,
+            0.0,
+            0.035
+          ],
+          [
+            0.5525,
+            0.41,
+            0.0375
+          ],
+          [
+            0.1925,
+            0.005,
+            0.8025
+          ]
+        ],
+        "recovery_accuracy": 0.725833,
+        "congruent_recovered": 0.41,
+        "n_per_group": 60,
+        "n_reps": 400
+      },
+      "crossed": {
+        "confusion": [
+          [
+            0.9425,
+            0.0025,
+            0.055
+          ],
+          [
+            0.02,
+            0.975,
+            0.005
+          ],
+          [
+            0.1075,
+            0.0,
+            0.8925
+          ]
+        ],
+        "recovery_accuracy": 0.936667,
+        "congruent_recovered": 0.975,
+        "n_per_group": 60,
+        "n_reps": 400
+      }
+    },
+    "power_curve": [
+      {
+        "n_per_group": 20,
+        "power": 0.7
+      },
+      {
+        "n_per_group": 30,
+        "power": 0.893333
+      },
+      {
+        "n_per_group": 40,
+        "power": 0.963333
+      },
+      {
+        "n_per_group": 60,
+        "power": 0.996667
+      },
+      {
+        "n_per_group": 80,
+        "power": 1.0
+      },
+      {
+        "n_per_group": 120,
+        "power": 1.0
+      },
+      {
+        "n_per_group": 160,
+        "power": 1.0
+      },
+      {
+        "n_per_group": 200,
+        "power": 1.0
+      }
+    ],
+    "n_per_group_for_80pct": 30,
+    "effect_size": 0.45
+  },
+  "binding": {
+    "prior_shift": 0.22,
+    "priors_comparison": {
+      "human": 0.55,
+      "nonhuman_neutral": 0.3,
+      "nonhuman_congruent": 0.3
+    },
+    "priors_identifying": {
+      "human": 0.33,
+      "nonhuman_neutral": 0.3,
+      "nonhuman_congruent": 0.52
+    },
+    "by_morphology": {
+      "human": {
+        "comparison_ownership": 0.540801,
+        "identifying_ownership": 0.321849,
+        "ownership_difference": -0.218952,
+        "comparison_drift": 1.344594,
+        "identifying_drift": 0.800213,
+        "drift_difference": -0.544381
+      },
+      "nonhuman_neutral": {
+        "comparison_ownership": 0.292266,
+        "identifying_ownership": 0.292266,
+        "ownership_difference": 0.0,
+        "comparison_drift": 0.726662,
+        "identifying_drift": 0.726662,
+        "drift_difference": 0.0
+      },
+      "nonhuman_congruent": {
+        "comparison_ownership": 0.292266,
+        "identifying_ownership": 0.510733,
+        "ownership_difference": 0.218467,
+        "comparison_drift": 0.726662,
+        "identifying_drift": 1.269836,
+        "drift_difference": 0.543174
+      }
+    },
+    "human_ownership_sign": -1.0,
+    "congruent_ownership_sign": 1.0,
+    "one_knob_two_signs": true,
+    "dissociation_sweep": [
+      {
+        "discrepancy": 0.5,
+        "ownership_gain": 0.227678,
+        "drift_gain": 0.094346,
+        "gain_ratio": 0.414384
+      },
+      {
+        "discrepancy": 1.0,
+        "ownership_gain": 0.227477,
+        "drift_gain": 0.188525,
+        "gain_ratio": 0.828767
+      },
+      {
+        "discrepancy": 2.0,
+        "ownership_gain": 0.225541,
+        "drift_gain": 0.373842,
+        "gain_ratio": 1.657534
+      },
+      {
+        "discrepancy": 3.0,
+        "ownership_gain": 0.218467,
+        "drift_gain": 0.543174,
+        "gain_ratio": 2.486301
+      },
+      {
+        "discrepancy": 4.0,
+        "ownership_gain": 0.201578,
+        "drift_gain": 0.668243,
+        "gain_ratio": 3.315068
+      }
+    ],
+    "small_discrepancy_gain_ratio": 0.414384
+  },
+  "reachable": {
+    "profiles": {
+      "self_leaning": {
+        "alpha_self": 0.16,
+        "alpha_other": 0.05,
+        "peak_self": 1.59465,
+        "peak_other": 1.385361,
+        "residual_self": 0.542566,
+        "residual_other": 0.428402,
+        "hysteresis_self": 0.545484,
+        "hysteresis_other": 0.545484,
+        "dissociation_index": 0.209288
+      },
+      "other_leaning": {
+        "alpha_self": 0.05,
+        "alpha_other": 0.16,
+        "peak_self": 1.385361,
+        "peak_other": 1.59465,
+        "residual_self": 0.428402,
+        "residual_other": 0.542566,
+        "hysteresis_self": 0.545484,
+        "hysteresis_other": 0.545484,
+        "dissociation_index": -0.209288
+      },
+      "comparison": {
+        "alpha_self": 0.07,
+        "alpha_other": 0.07,
+        "peak_self": 1.486633,
+        "peak_other": 1.486633,
+        "residual_self": 0.483644,
+        "residual_other": 0.483644,
+        "hysteresis_self": 0.545484,
+        "hysteresis_other": 0.545484,
+        "dissociation_index": 0.0
+      }
+    },
+    "double_dissociation_crossed": true,
+    "dissociation_gap": 0.418577,
+    "power_curve": [
+      {
+        "n_per_group": 15,
+        "power": 0.8975
+      },
+      {
+        "n_per_group": 25,
+        "power": 0.975
+      },
+      {
+        "n_per_group": 40,
+        "power": 0.9975
+      },
+      {
+        "n_per_group": 60,
+        "power": 1.0
+      },
+      {
+        "n_per_group": 100,
+        "power": 1.0
+      }
+    ],
+    "n_per_group_for_80pct": 15,
+    "reachable_span_self": 0.544246,
+    "reachable_span_other": 0.544246,
+    "fast_only_baseline": 0.6,
+    "trained_over_fast_ratio": 2.664603,
+    "constants": {
+      "T_TRAIN": 30,
+      "T_REST": 30,
+      "PHI_DECAY": 0.02
+    }
+  },
+  "cited_records": {
+    "therian_n": {
+      "value": 112,
+      "source": "Clegg, Collings and Roxburgh 2019, Society and Animals 27: 403-426"
+    },
+    "therian_comparison_n": {
+      "value": 265,
+      "source": "same"
+    },
+    "therian_aq_odds_ratio": {
+      "value": 5.9,
+      "source": "same; 95 percent interval 2.04 to 17.31"
+    },
+    "therian_aq_or_ci_low": {
+      "value": 2.04,
+      "source": "same"
+    },
+    "therian_aq_or_ci_high": {
+      "value": 17.31,
+      "source": "same"
+    },
+    "furry_rhi_n": {
+      "value": 50,
+      "source": "Kranjec et al. 2019, Proc. Cognitive Science Society"
+    },
+    "tulpamancy_study_n": {
+      "value": 243,
+      "source": "Palmer-Cooper, McGuire and Wright 2021, Cogn. Neuropsychiatry 27: 86-104"
+    },
+    "cat_ears_n": {
+      "value": 24,
+      "source": "Yamamura et al. 2026, Front. Virtual Real. 7"
+    },
+    "dog_ears_n": {
+      "value": 28,
+      "source": "Khan, Trinh, Lisle and Do 2026, arXiv:2606.26364"
+    },
+    "vr_meta_articles": {
+      "value": 111,
+      "source": "Mottelson, Muresan, Hornbaek and Makransky 2023, ACM TOCHI 30: 1-42"
+    },
+    "fever_prospective_n": {
+      "value": 141,
+      "source": "Byrne et al. 2022, medRxiv 2022.05.23.22275374"
+    },
+    "fever_improving_n": {
+      "value": 3,
+      "source": "same"
+    },
+    "fever_curran_n": {
+      "value": 30,
+      "source": "Curran et al. 2007, Pediatrics 120: e1386-e1392"
+    }
+  },
+  "constants": {
+    "SEED": 20260829,
+    "EFFECT": 0.45,
+    "NOISE": 1.0,
+    "SIGMA_V": 1.0,
+    "SIGMA_P": 2.2
+  },
+  "checks": {
+    "human_only_cannot_discriminate": true,
+    "crossed_discriminates_better": true,
+    "crossed_recovers_congruent": true,
+    "congruent_invisible_in_human_only": true,
+    "adding_generic_helps_little": true,
+    "power_curve_monotone": true,
+    "decisive_n_is_large": true,
+    "one_knob_two_signs": true,
+    "human_ownership_lower_for_identifying": true,
+    "congruent_ownership_higher": true,
+    "neutral_morphology_unmoved": true,
+    "ownership_moves_more_than_drift_when_close": true,
+    "dissociation_grows_with_discrepancy": true,
+    "hysteresis_positive": true,
+    "hysteresis_incomplete": true,
+    "faster_learning_leaves_more_residue": true,
+    "double_dissociation_is_crossed": true,
+    "reachable_exceeds_fast_only": true,
+    "reachable_spans_both_axes": true,
+    "dissociation_detectable_at_moderate_n": true
+  }
+}

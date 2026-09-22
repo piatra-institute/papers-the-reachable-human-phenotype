@@ -106,6 +106,53 @@
       }
     ],
     "n_per_group_for_80pct": 30,
+    "power_curve_fine": [
+      {
+        "n_per_group": 20,
+        "power": 0.7055
+      },
+      {
+        "n_per_group": 21,
+        "power": 0.7505
+      },
+      {
+        "n_per_group": 22,
+        "power": 0.7695
+      },
+      {
+        "n_per_group": 23,
+        "power": 0.7795
+      },
+      {
+        "n_per_group": 24,
+        "power": 0.793
+      },
+      {
+        "n_per_group": 25,
+        "power": 0.815
+      },
+      {
+        "n_per_group": 26,
+        "power": 0.8415
+      },
+      {
+        "n_per_group": 27,
+        "power": 0.837
+      },
+      {
+        "n_per_group": 28,
+        "power": 0.8505
+      },
+      {
+        "n_per_group": 29,
+        "power": 0.8795
+      },
+      {
+        "n_per_group": 30,
+        "power": 0.8785
+      }
+    ],
+    "n_per_group_for_80pct_fine": 25,
     "effect_size": 0.45
   },
   "binding": {
@@ -244,6 +291,7 @@
       }
     ],
     "n_per_group_for_80pct": 15,
+    "n_per_group_for_80pct_exact": 10.975472,
     "reachable_span_self": 0.544246,
     "reachable_span_other": 0.544246,
     "fast_only_baseline": 0.6,
@@ -322,6 +370,8 @@
     "congruent_invisible_in_human_only": true,
     "adding_generic_helps_little": true,
     "power_curve_monotone": true,
+    "fine_n80_inside_grid_bracket": true,
+    "dissociation_closed_form_n80_below_grid": true,
     "decisive_n_is_large": true,
     "one_knob_two_signs": true,
     "human_ownership_lower_for_identifying": true,

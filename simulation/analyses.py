@@ -187,8 +187,32 @@ def run_design(n_reps=400, n_per_group=60) -> dict:
             hits += abs(t) > 1.96
         power_curve.append({"n_per_group": n, "power": hits / reps})
     n80 = next((p["n_per_group"] for p in power_curve if p["power"] >= 0.8), None)
+    # the coarse grid only brackets the 80 percent point; scan every n
+    # between the last grid point below it and n80, with its own stream
+    fine_rng = np.random.default_rng(SEED + 11)
+    lo = max(p["n_per_group"] for p in power_curve if p["n_per_group"] < n80)
+    fine = []
+    for n in range(lo, n80 + 1):
+        hits = 0
+        reps = 2000
+        for _ in range(reps):
+            rows, y, aware = _simulate("congruent", "crossed", n, fine_rng)
+            group = rows[:, 0].astype(float)
+            morph = rows[:, 1]
+            contrast = np.where(morph == 0, -1.0, np.where(morph == 2, 1.0, 0.0))
+            X = np.column_stack([np.ones_like(y), group, group * contrast])
+            beta, *_ = np.linalg.lstsq(X, y, rcond=None)
+            resid = y - X @ beta
+            dof = len(y) - X.shape[1]
+            s2 = (resid @ resid) / dof
+            cov = s2 * np.linalg.inv(X.T @ X)
+            t = beta[2] / np.sqrt(cov[2, 2])
+            hits += abs(t) > 1.96
+        fine.append({"n_per_group": n, "power": hits / reps})
+    n80_fine = next((p["n_per_group"] for p in fine if p["power"] >= 0.8), n80)
     return {"designs": out, "power_curve": power_curve,
-            "n_per_group_for_80pct": n80, "effect_size": EFFECT}
+            "n_per_group_for_80pct": n80, "power_curve_fine": fine,
+            "n_per_group_for_80pct_fine": n80_fine, "effect_size": EFFECT}
 
 
 # ----------------------------------------------------------------------
@@ -339,6 +363,10 @@ def run_reachable() -> dict:
             hits += abs(t) > 1.96
         power.append({"n_per_group": n, "power": hits / reps})
     n80 = next((p["n_per_group"] for p in power if p["power"] >= 0.8), None)
+    # closed form for the two-sample test: n = 2 (z_.975 + z_.8)^2 (sd/gap)^2
+    from statistics import NormalDist
+    z = NormalDist().inv_cdf
+    n80_exact = 2 * (z(0.975) + z(0.8)) ** 2 * (noise / (di_self - di_other)) ** 2
 
     # the reachable set: how much of the phenotype plane the safe
     # perturbations cover, against the ordinary operating region
@@ -357,6 +385,7 @@ def run_reachable() -> dict:
         "dissociation_gap": float(di_self - di_other),
         "power_curve": power,
         "n_per_group_for_80pct": n80,
+        "n_per_group_for_80pct_exact": float(n80_exact),
         "reachable_span_self": span_s,
         "reachable_span_other": span_o,
         "fast_only_baseline": baseline,
@@ -414,6 +443,10 @@ def _checks(des, bind, reach) -> dict:
     c["power_curve_monotone"] = all(
         b["power"] >= a["power"] - 0.05
         for a, b in zip(des["power_curve"], des["power_curve"][1:]))
+    c["fine_n80_inside_grid_bracket"] = (
+        des["n_per_group_for_80pct_fine"] <= des["n_per_group_for_80pct"])
+    c["dissociation_closed_form_n80_below_grid"] = (
+        reach["n_per_group_for_80pct_exact"] <= reach["n_per_group_for_80pct"])
     c["decisive_n_is_large"] = (des["n_per_group_for_80pct"] is not None
                                 and des["n_per_group_for_80pct"] >= 20)
     c["one_knob_two_signs"] = bind["one_knob_two_signs"]

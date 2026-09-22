@@ -1,14 +1,34 @@
 slug: the-reachable-human-phenotype
 web_slug: the-reachable-human-phenotype
-title: "The Reachable Human Phenotype: Factorized Selfhood, Morphology-Congruent Binding, and What the Decisive Experiment Costs"
-header: "The Reachable Human Phenotype"
-created: "2026-08"        # inception month (drives YYYY/MM archive path)
-date: "August 2026"           # publication month, e.g. "May 2026" (shown on web)
+title: 'The Reachable Human Phenotype: Factorized Selfhood, Morphology-Congruent Binding, and What the
+  Decisive Experiment Costs'
+header: The Reachable Human Phenotype
+created: 2026-08
+date: August 2026
 paper_dir: paper
 has_simulation: true
-claims_target: results.json   # results.json | claim-ledger | none
+claims_target: results.json
 repo: git@github.com:piatra-institute/papers-the-reachable-human-phenotype.git
 github: https://github.com/piatra-institute/papers-the-reachable-human-phenotype
-status: published             # draft | built | published
-abstract: |-
-  Cognitive neuroscience studies capability, body ownership, agency, and identity in separate literatures, and each has independently shown that its object moves. Synchronous multisensory evidence gives people ownership of rubber hands, third arms, and virtual cat ears; avatars feed back into behavior; and communities exist whose members report persistent nonhuman self-models or cultivated inner agents. This paper treats those findings as coordinates of one object, the reachable human phenotype, defined as the set of configurations a nervous system can enter through physiological change, sensory perturbation, learning, and context. Ten coordinates are proposed and the factorization is forced rather than tidy: a 2026 experiment raised subjective ownership of virtual cat ears in 24 participants while proprioceptive drift did not follow, so ownership and body schema moved apart in one study, and any scalar strength-of-alternate-self would have erased the field's cleanest dissociation. The paper's hinge is an awkward empirical result. The one direct study of body ownership in a nonhuman-identifying community found 50 furries reporting weaker embodiment of a human rubber hand, the opposite sign from a global-plasticity account. A causal-inference model of ownership with a morphology-congruence prior reproduces that sign and predicts stronger congruent-nonhuman ownership from the same shifted parameter, moving 0.22 in each direction: one knob, two signs, so the anomaly becomes support. The central practical contribution is a design analysis. Simulating three live theories and fitting all three back, the design the literature has run cannot tell them apart, recovering the truth at 0.51 and misreading morphology-congruent binding as global plasticity 96 percent of the time; adding a generic nonhuman avatar reaches 0.73; only a crossed design manipulating morphology against identity congruence reaches 0.94, and it needs about 30 participants per group for 80 percent power on the interaction rather than the 20 typical of embodiment work. A multiscale formalism then separates fast neural state from slowly learned model parameters, makes hysteresis measurable as the 55 percent of a trained configuration that survives after the perturbation stops, and states the SELF and OTHER binding hypothesis as a crossed prediction rather than a main effect. Nothing here is evidence about any person or community; the models exist to say which experiment would be, and what it would cost.
+status: published
+abstract: 'Capability, body ownership, agency and identity are studied in separate literatures, and each
+  has shown that its object can be moved: synchronous multisensory evidence produces ownership of rubber
+  hands, third arms and virtual cat ears, avatars alter later behavior, and some communities report persistent
+  nonhuman self-models or cultivated inner agents. We treat these findings as coordinates of one object,
+  the reachable human phenotype, the set of configurations a nervous system can enter through physiological
+  change, sensory perturbation, learning and context, and propose ten coordinates. A single scalar would
+  miss the clearest available dissociation, in which ownership of virtual cat ears rose in 24 participants
+  while proprioceptive drift did not. The one direct study of body ownership in a nonhuman-identifying
+  community found 50 furries reporting weaker embodiment of a human rubber hand, the opposite of what
+  global plasticity predicts. A causal-inference model of ownership with a morphology-congruence prior
+  reproduces that sign and, from the same parameter shift, predicts ownership of a congruent nonhuman
+  body higher by 0.22. In simulation, the design used so far recovers the true theory in 0.51 of fits
+  and reads morphology-congruent binding as global plasticity 96.5 percent of the time; a crossed design
+  manipulating morphology against identity congruence recovers it in 0.94 and needs about 25 participants
+  per group for 80 percent power on the diagnostic interaction. A multiscale formalism separates fast
+  state from slowly learned parameters, makes hysteresis measurable (55 percent of a trained gain survives
+  the end of the perturbation), and states the SELF and OTHER binding hypothesis as a crossed prediction.
+  None of the results is evidence about any person or community.'
+web_blurb: Body ownership, agency and identity treated as coordinates of one measurable space. A morphology-congruence
+  model explains weaker rubber-hand ownership in furries, and a design analysis shows the crossed experiment
+  needs about 25 participants per group.

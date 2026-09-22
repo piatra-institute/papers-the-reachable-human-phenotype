@@ -2,6 +2,16 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-09-22 — prose revision
+
+Prose rewritten against the house standards. Headings made descriptive (Introduction, Coordinates of the phenotype, Evidence from nonhuman-identifying and plural communities, A morphology-congruence model of body ownership, Design analysis, A multiscale formalism, Limits of the software metaphor, Natural experiments: fever in autism, Ethics and dual use, Objections, Falsification, Scope of the claims, Reproducibility).
+
+Corrections found during the pass:
+  - The sample size for 80 percent power on the crossed interaction was reported as "about 30 per group". 30 was the first point of a coarse grid (20, 30, 40, ...) above 0.8; power at 20 is 0.71 and at 30 is 0.89. A per-participant scan from 20 to 30 (2,000 replicates each, separate random stream) crosses 0.8 at 25. The text now says about 25 per group; new fields design.power_curve_fine and design.n_per_group_for_80pct_fine, invariant fine_n80_inside_grid_bracket. The contrast with the typical 20 per group is weaker than stated before and is now given with the power at 20.
+  - The SELF and OTHER crossing was said to be detectable "at about 15 participants per group"; 15 was the first grid point and already had power 0.90. The closed-form two-sample calculation gives 11.0 per group; new field reachable.n_per_group_for_80pct_exact, invariant dissociation_closed_form_n80_below_grid (22 invariants).
+  - Misclassification rates were rounded to whole percents that the values do not support (0.965 reported as 96, 0.975 as 97); now 96.5 and 97.5 percent.
+  - Figure 2's power annotation was placed below the axis range and never rendered; it now shows the fine-scan value.
+
 ## 2026-08-29 — v1, draft complete; PDF build blocked by a missing TeX distribution
 
 Scope: the entire paper, simulation, and evidence base, from the seed chat to the point where the build environment failed.

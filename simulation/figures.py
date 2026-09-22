@@ -63,7 +63,7 @@ def plot_design(res: dict, path: str) -> None:
         ax.set_xlabel("selected", fontsize=8.5, labelpad=14)
     mis = np.array(des["designs"]["human_only"]["confusion"])[1, 0]
     axes[0].annotate(f"congruent binding is read as global plasticity "
-                     f"{mis:.0%} of the time",
+                     f"{mis:.1%} of the time",
                      (1.0, 2.95), fontsize=7.4, color=RED, ha="center",
                      va="top", annotation_clip=False)
     ax = axes[3]
@@ -71,13 +71,16 @@ def plot_design(res: dict, path: str) -> None:
     ax.plot([p["n_per_group"] for p in pc], [p["power"] for p in pc],
             "-o", color=BLUE, lw=1.8, ms=4)
     ax.axhline(0.8, color=GRAY, lw=0.9, ls="--")
-    n80 = des["n_per_group_for_80pct"]
+    pf = des["power_curve_fine"]
+    ax.plot([p["n_per_group"] for p in pf], [p["power"] for p in pf],
+            "o", color=GREEN, ms=2.6)
+    n80 = des["n_per_group_for_80pct_fine"]
     ax.axvline(n80, color=GREEN, lw=0.9, ls=":")
-    ax.annotate(f"80 percent power at\n{n80} per group", (n80 + 6, 0.55),
+    ax.annotate(f"80 percent power at\n{n80} per group", (n80 + 8, 0.74),
                 fontsize=7.6, color=GREEN)
     ax.set_xlabel("participants per group", fontsize=8.5)
     ax.set_ylabel("power for the interaction", fontsize=8.5)
-    ax.set_title("what the decisive design costs", fontsize=9, color=INK)
+    ax.set_title("power for the crossed interaction", fontsize=9, color=INK)
     ax.grid(True, color=GRID, lw=0.5, alpha=0.7)
     _style(ax)
     fig.tight_layout()
@@ -107,8 +110,8 @@ def plot_binding(res: dict, path: str) -> None:
     ax1.set_xticks(x)
     ax1.set_xticklabels(labels, fontsize=8)
     ax1.set_ylabel("ownership (posterior of a common cause)", fontsize=9)
-    ax1.set_title("one knob, two signs: the awkward finding\n"
-                  "and the framework's prediction from one parameter",
+    ax1.set_title("ownership by morphology under one\n"
+                  "shifted morphology-congruence prior",
                   fontsize=9.5, color=INK)
     ax1.set_ylim(0, max(max(comp), max(iden)) * 1.42)
     ax1.legend(frameon=False, fontsize=7.8, loc="upper center")
@@ -126,14 +129,14 @@ def plot_binding(res: dict, path: str) -> None:
         ax2.axvline(cross, color=GRAY, lw=0.9, ls=":")
     top = max(s["drift_gain"] for s in sw)
     ax2.set_ylim(0, top * 1.30)
-    ax2.annotate("ownership moves more than drift here:\n"
-                 "the regime the cat-ear result sits in",
+    ax2.annotate("ownership moves more than drift\n"
+                 "(regime of the cat-ear result)",
                  (d[0] + 0.05, top * 0.60), fontsize=7.4, color=INK)
     ax2.annotate("drift dominates here", (d[-1] - 0.1, top * 0.22),
                  fontsize=7.4, color=GRAY, ha="right")
     ax2.set_xlabel("visual-proprioceptive discrepancy", fontsize=9)
     ax2.set_ylabel("change under the same prior shift", fontsize=9)
-    ax2.set_title("ownership and body schema come apart",
+    ax2.set_title("ownership and drift against discrepancy",
                   fontsize=9.5, color=INK)
     ax2.legend(frameon=False, fontsize=8, loc="upper left")
     ax2.grid(True, color=GRID, lw=0.5, alpha=0.7)
@@ -161,7 +164,7 @@ def plot_reachable(res: dict, path: str) -> None:
     ax1.set_xticks(range(3))
     ax1.set_xticklabels(labels, fontsize=8)
     ax1.set_ylabel("SELF minus OTHER binding", fontsize=9)
-    ax1.set_title("the prediction is a crossed sign,\nnever a main effect",
+    ax1.set_title("SELF minus OTHER binding\nby profile",
                   fontsize=9.5, color=INK)
     ax1.grid(True, color=GRID, lw=0.5, alpha=0.7)
     _style(ax1)
@@ -183,12 +186,11 @@ def plot_reachable(res: dict, path: str) -> None:
     ax2.annotate("fast component alone", (T + R - 1, base + 0.03),
                  fontsize=7.6, color=GRAY, ha="right")
     hy = prof["self_leaning"]["hysteresis_self"]
-    ax2.annotate(f"what survives the drive:\n{hy:.0%} of the trained gain",
+    ax2.annotate(f"residual after the drive:\n{hy:.0%} of the trained gain",
                  (T + 2, resid + 0.28), fontsize=7.8, color=INK)
     ax2.set_xlabel("session", fontsize=9)
     ax2.set_ylabel("SELF binding", fontsize=9)
-    ax2.set_title("hysteresis: a learned configuration outlives\n"
-                  "the manipulation that built it", fontsize=9.5, color=INK)
+    ax2.set_title("SELF binding during training\nand after the perturbation stops", fontsize=9.5, color=INK)
     ax2.grid(True, color=GRID, lw=0.5, alpha=0.7)
     _style(ax2)
     fig.tight_layout()

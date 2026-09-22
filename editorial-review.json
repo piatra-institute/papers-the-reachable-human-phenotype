@@ -1,0 +1,10 @@
+{
+  "manuscript_sha256": "4b473117ac46c74c33193aed60e2b0db285cb196f5db7f7b76e507634d377651",
+  "full_read": true,
+  "argument_review": true,
+  "structure_review": true,
+  "voice_review": true,
+  "source_review": true,
+  "final_read": true,
+  "notes": "Prose revision: descriptive headings; 'this paper' 18 -> 0 and 'rather than' 22 -> 0; abstract rewritten (268 words); aphoristic lines ('one knob, two signs', 'a framework that cannot say what to measure next is a vocabulary') removed; sample-size and percentage values corrected from grid artifacts; all citations preserved."
+}

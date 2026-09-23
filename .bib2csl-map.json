@@ -1,0 +1,250 @@
+[
+ {
+  "id": "arai2022",
+  "families": [
+   "Arai",
+   "Saito",
+   "Fukuoka",
+   "Ueda",
+   "Sugimoto",
+   "Kitazaki",
+   "Inami"
+  ],
+  "authors_text": "Arai, K., Saito, H., Fukuoka, M., Ueda, S., Sugimoto, M., Kitazaki, M., and Inami, M.",
+  "year": "2022",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "blanke2015",
+  "families": [
+   "Blanke",
+   "Slater",
+   "Serino"
+  ],
+  "authors_text": "Blanke, O., Slater, M., and Serino, A.",
+  "year": "2015",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "blom2025",
+  "families": [
+   "Blom",
+   "Sharpless"
+  ],
+  "authors_text": "Blom, J. D., and Sharpless, B. A.",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "botvinick1998",
+  "families": [
+   "Botvinick",
+   "Cohen"
+  ],
+  "authors_text": "Botvinick, M., and Cohen, J.",
+  "year": "1998",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "byrne2022",
+  "families": [
+   "Byrne"
+  ],
+  "authors_text": "Byrne, R. E., et al.",
+  "year": "2022",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "clegg2019",
+  "families": [
+   "Clegg",
+   "Collings",
+   "Roxburgh"
+  ],
+  "authors_text": "Clegg, H., Collings, R., and Roxburgh, E. C.",
+  "year": "2019",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "curran2007",
+  "families": [
+   "Curran",
+   "Newschaffer",
+   "Lee",
+   "Crawford",
+   "Johnston",
+   "Zimmerman"
+  ],
+  "authors_text": "Curran, L. K., Newschaffer, C. J., Lee, L.-C., Crawford, S. O., Johnston, M. V., and Zimmerman, A. W.",
+  "year": "2007",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "grivell2014",
+  "families": [
+   "Grivell",
+   "Clegg",
+   "Roxburgh"
+  ],
+  "authors_text": "Grivell, T., Clegg, H., and Roxburgh, E. C.",
+  "year": "2014",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "guterstam2011",
+  "families": [
+   "Guterstam",
+   "Petkova",
+   "Ehrsson"
+  ],
+  "authors_text": "Guterstam, A., Petkova, V. I., and Ehrsson, H. H.",
+  "year": "2011",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "khan2026",
+  "families": [
+   "Khan",
+   "Trinh",
+   "Lisle",
+   "Do"
+  ],
+  "authors_text": "Khan, O. A., Trinh, B. H., Lisle, L., and Do, T. D.",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "kranjec2019",
+  "families": [
+   "Kranjec",
+   "Cardillo",
+   "Chatterjee"
+  ],
+  "authors_text": "Kranjec, A., Cardillo, E. R., Chatterjee, A., et al.",
+  "year": "2019",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "krekhov2019",
+  "families": [
+   "Krekhov",
+   "Cmentowski",
+   "Krüger"
+  ],
+  "authors_text": "Krekhov, A., Cmentowski, S., and Krüger, J.",
+  "year": "2019",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "luiggihernandez2025",
+  "families": [
+   "Luiggi-Hernández",
+   "Fein",
+   "Bradley",
+   "Pelly"
+  ],
+  "authors_text": "Luiggi-Hernández, J. G., Fein, E., Bradley, C., and Pelly, D.",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "mottelson2023",
+  "families": [
+   "Mottelson",
+   "Muresan",
+   "Hornbæk",
+   "Makransky"
+  ],
+  "authors_text": "Mottelson, A., Muresan, A., Hornbæk, K., and Makransky, G.",
+  "year": "2023",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "palmercooper2021",
+  "families": [
+   "Palmer-Cooper",
+   "McGuire",
+   "Wright"
+  ],
+  "authors_text": "Palmer-Cooper, E., McGuire, N., and Wright, A.",
+  "year": "2021",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "roberts2015",
+  "families": [
+   "Roberts",
+   "Plante",
+   "Gerbasi",
+   "Reysen"
+  ],
+  "authors_text": "Roberts, S. E., Plante, C. N., Gerbasi, K. C., and Reysen, S.",
+  "year": "2015",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "samad2015",
+  "families": [
+   "Samad",
+   "Chung",
+   "Shams"
+  ],
+  "authors_text": "Samad, M., Chung, A. J., and Shams, L.",
+  "year": "2015",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "seth2013",
+  "families": [
+   "Seth"
+  ],
+  "authors_text": "Seth, A. K.",
+  "year": "2013",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "taylor2003",
+  "families": [
+   "Taylor",
+   "Hodges",
+   "Kohányi"
+  ],
+  "authors_text": "Taylor, M., Hodges, S. D., and Kohányi, A.",
+  "year": "2003",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "won2015",
+  "families": [
+   "Won",
+   "Bailenson",
+   "Lee",
+   "Lanier"
+  ],
+  "authors_text": "Won, A. S., Bailenson, J., Lee, J., and Lanier, J.",
+  "year": "2015",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "yamamura2026",
+  "families": [
+   "Yamamura",
+   "Kondo",
+   "Sakurada",
+   "Normand"
+  ],
+  "authors_text": "Yamamura, R., Kondo, R., Sakurada, K., and Normand, J.-M.",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "yee2007",
+  "families": [
+   "Yee",
+   "Bailenson"
+  ],
+  "authors_text": "Yee, N., and Bailenson, J.",
+  "year": "2007",
+  "status": "VERIFIED-CROSSREF"
+ }
+]

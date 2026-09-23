@@ -2,6 +2,18 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-09-23 — structured-evidence migration
+
+Structured-evidence migration (references and claims).
+- references.yaml: 22 CSL entries. 21 resolved through doi.org content negotiation (Crossref, DataCite for the arXiv preprint, medRxiv DOI for Byrne et al.) and checked for year, title and authors; kranjec2019 entered by hand from the OpenAlex record of eScholarship 37x5162v (CogSci 2019, pp. 596-602). In-text citations converted to Pandoc [@id]; the legacy list replaced by the citeproc-rendered list (Chicago author-date).
+- Correction: krekhov2019 had been listed in the CHI PLAY 2019 proceedings, pp. 439-451, with sources.md giving DOI 10.1145/3311350.3347172; that DOI is the group's "Beyond Human" paper. The cited paper appeared at the 2019 IEEE Conference on Games, pp. 1-8, DOI 10.1109/CIG.2019.8848005.
+- Correction: kranjec2019 authors "Kranjec, A., Cardillo, E. R., Chatterjee, A., et al." -> Kranjec, Lamanna, Guzman, Plante, Reysen, Gerbasi, Roberts, Fein (OpenAlex record).
+- Correction: byrne2022 first author "Byrne, R. E." -> Katherine Byrne; yamamura2026 first author "R." -> Hiroo Yamamura, with Maki Sugimoto added as fifth author; luiggihernandez2025 adds Roberts and Gerbasi; full titles restored for Blom and Sharpless ("...Conceptualize Zoomorphism as a Diagnostic Spectrum"), Luiggi-Hernández et al. ("...Among Therians and Otherkin") and Yamamura et al. In-text citations all render as "et al.", so no sentence changed.
+- claims.yaml: 48 claims (21 computation, 13 source, 3 definition, 3 assumption, 6 interpretation, 2 normative). All simulation numbers in abstract and body bound to results.json (the human-hand ownership decrease with scale -1 on the signed difference). Source claims checked against Crossref/DataCite/OpenAlex abstracts (Yamamura et al. 24 participants and drift null, Khan et al. n = 28, Mottelson et al. 111 articles, Roberts et al., Palmer-Cooper et al. 243, Taylor et al., Kranjec et al. direction of effect, Samad et al., Curran et al. 30 + 30, Guterstam et al., Arai et al., Won et al., Krekhov et al., Yee and Bailenson, Seth).
+- Unverified, not bound: Kranjec et al. sample of 50 and the historical-comparison design (abstract gives neither); Clegg et al. predictors and the odds ratio 5.9 (2.04-17.31) (abstract gives only 112 and 265); Byrne et al. "of the 50 who had a fever" (abstract gives 3 of 244 children with consistent improvement); Grivell et al. phantom parts (abstract gives five interviews and themes only); Blom and Sharpless's caution (not in abstract); Luiggi-Hernández et al., Blanke et al. and Botvinick and Cohen (no abstract retrieved).
+- Run: reachable (uv run python run_all.py); results.json reproduced byte for byte.
+- metadata claims_target: claim-ledger.
+
 ## 2026-09-22 — prose revision
 
 Prose rewritten against the house standards. Headings made descriptive (Introduction, Coordinates of the phenotype, Evidence from nonhuman-identifying and plural communities, A morphology-congruence model of body ownership, Design analysis, A multiscale formalism, Limits of the software metaphor, Natural experiments: fever in autism, Ethics and dual use, Objections, Falsification, Scope of the claims, Reproducibility).

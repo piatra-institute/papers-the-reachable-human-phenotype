@@ -1,5 +1,5 @@
 {
-  "pdf_sha256": "b3221d2e3e90da7851709f58a195bd5b0ccb31a177641cafde10505a5ca85adc",
+  "pdf_sha256": "67e59786f2e16350b0d46e5c09000d885e24bb7d4a4f89f4065d1ac287b77c06",
   "page_count": 11,
   "pages_inspected": [
     1,
@@ -15,5 +15,5 @@
     11
   ],
   "all_pages_inspected": true,
-  "notes": "All 11 pages inspected after the prose revision; figure titles replaced with descriptive ones; the missing 80-percent-power annotation in figure 2 restored. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (50d3b329a430 to b3221d2e3e90); the rendered text is byte-for-byte identical and no page was re-inspected."
+  "notes": "All 11 pages inspected after the migration; citations and the citeproc reference list render correctly, no unresolved keys. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (4b14bc9cfdcc to 67e59786f2e1); the rendered text is byte-for-byte identical and no page was re-inspected."
 }

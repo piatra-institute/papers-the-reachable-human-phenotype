@@ -1,0 +1,519 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: 88b0f0f87fa7ea0d6e0591cdcd9fef97fadc8bfc000472c41ec1d44037c54320
+claims:
+- id: abs-congruent
+  kind: computation
+  passage: A causal-inference model of ownership with a morphology-congruence prior reproduces that sign
+    and, from the same parameter shift, predicts ownership of a congruent nonhuman body higher by 0.22.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /binding/by_morphology/nonhuman_congruent/ownership_difference
+    reported: '0.22'
+    units: ownership (posterior probability of common cause)
+    conditions: causal-inference ownership model with a morphology-congruence prior; human prior 0.55
+      -> 0.33, congruent 0.30 -> 0.52; sigma_v 1, sigma_p 2.2
+    decimals: 2
+- id: abs-human-only
+  kind: computation
+  passage: In simulation, the design used so far recovers the true theory in 0.51 of fits and reads morphology-congruent
+    binding as global plasticity 96.5 percent of the time; a crossed design manipulating morphology against
+    identity congruence recovers it in 0.94 and needs about 25 participants per group for 80 percent power
+    on the diagnostic interaction.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/human_only/recovery_accuracy
+    reported: '0.51'
+    units: recovery accuracy
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 2
+- id: abs-misread
+  kind: computation
+  passage: In simulation, the design used so far recovers the true theory in 0.51 of fits and reads morphology-congruent
+    binding as global plasticity 96.5 percent of the time; a crossed design manipulating morphology against
+    identity congruence recovers it in 0.94 and needs about 25 participants per group for 80 percent power
+    on the diagnostic interaction.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/human_only/confusion/1/0
+    reported: '96.5'
+    units: percent of fits
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829; congruent binding true, global plasticity selected
+    decimals: 1
+    scale: 100
+- id: abs-crossed
+  kind: computation
+  passage: In simulation, the design used so far recovers the true theory in 0.51 of fits and reads morphology-congruent
+    binding as global plasticity 96.5 percent of the time; a crossed design manipulating morphology against
+    identity congruence recovers it in 0.94 and needs about 25 participants per group for 80 percent power
+    on the diagnostic interaction.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/crossed/recovery_accuracy
+    reported: '0.94'
+    units: recovery accuracy
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 2
+- id: abs-n80
+  kind: computation
+  passage: In simulation, the design used so far recovers the true theory in 0.51 of fits and reads morphology-congruent
+    binding as global plasticity 96.5 percent of the time; a crossed design manipulating morphology against
+    identity congruence recovers it in 0.94 and needs about 25 participants per group for 80 percent power
+    on the diagnostic interaction.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/n_per_group_for_80pct_fine
+    reported: '25'
+    units: participants per group
+    conditions: diagnostic interaction, effect 0.45, per-participant scan 20-30
+    decimals: 0
+- id: abs-hyst
+  kind: computation
+  passage: A multiscale formalism separates fast state from slowly learned parameters, makes hysteresis
+    measurable (55 percent of a trained gain survives the end of the perturbation), and states the SELF
+    and OTHER binding hypothesis as a crossed prediction.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /reachable/profiles/comparison/hysteresis_self
+    reported: '55'
+    units: percent of trained gain
+    conditions: 'multiscale model: 30 training steps, 30 rest steps, decay 0.02, SELF/OTHER learning rates
+      0.16 vs 0.05'
+    decimals: 0
+    scale: 100
+- id: human-lower
+  kind: computation
+  passage: Shifting this one prior for an identifying group, with less prior mass on a human effector
+    and more on a congruent nonhuman one, lowers ownership of the human hand by 0.22 and raises ownership
+    of the congruent nonhuman body by 0.22, leaving a neutral nonhuman morphology unchanged (Figure 1,
+    left).
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /binding/by_morphology/human/ownership_difference
+    reported: '0.22'
+    units: ownership decrease (sign reversed)
+    conditions: causal-inference ownership model with a morphology-congruence prior; human prior 0.55
+      -> 0.33, congruent 0.30 -> 0.52; sigma_v 1, sigma_p 2.2
+    decimals: 2
+    scale: -1
+- id: congruent-higher
+  kind: computation
+  passage: Shifting this one prior for an identifying group, with less prior mass on a human effector
+    and more on a congruent nonhuman one, lowers ownership of the human hand by 0.22 and raises ownership
+    of the congruent nonhuman body by 0.22, leaving a neutral nonhuman morphology unchanged (Figure 1,
+    left).
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /binding/by_morphology/nonhuman_congruent/ownership_difference
+    reported: '0.22'
+    units: ownership increase
+    conditions: causal-inference ownership model with a morphology-congruence prior; human prior 0.55
+      -> 0.33, congruent 0.30 -> 0.52; sigma_v 1, sigma_p 2.2
+    decimals: 2
+- id: recovery-human
+  kind: computation
+  passage: With a single human effector, recovery is 0.51 against a chance level of 0.33.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/human_only/recovery_accuracy
+    reported: '0.51'
+    units: recovery accuracy
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 2
+- id: misread
+  kind: computation
+  passage: When morphology-congruent binding is true, that design selects global plasticity 96.5 percent
+    of the time.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/human_only/confusion/1/0
+    reported: '96.5'
+    units: percent
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 1
+    scale: 100
+- id: generic-rec
+  kind: computation
+  passage: Adding a generic nonhuman avatar raises recovery to 0.73 but identifies congruent binding only
+    41 percent of the time, because a neutral nonhuman body is the condition in which the two theories
+    agree.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/human_plus_generic/recovery_accuracy
+    reported: '0.73'
+    units: recovery accuracy
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 2
+- id: generic-cong
+  kind: computation
+  passage: Adding a generic nonhuman avatar raises recovery to 0.73 but identifies congruent binding only
+    41 percent of the time, because a neutral nonhuman body is the condition in which the two theories
+    agree.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/human_plus_generic/congruent_recovered
+    reported: '41'
+    units: percent
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 0
+    scale: 100
+- id: crossed-rec
+  kind: computation
+  passage: The crossed design, varying morphology against identity congruence within participants, reaches
+    0.94 and recovers congruent binding 97.5 percent of the time.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/crossed/recovery_accuracy
+    reported: '0.94'
+    units: recovery accuracy
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 2
+- id: crossed-cong
+  kind: computation
+  passage: The crossed design, varying morphology against identity congruence within participants, reaches
+    0.94 and recovers congruent binding 97.5 percent of the time.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/designs/crossed/congruent_recovered
+    reported: '97.5'
+    units: percent
+    conditions: model selection over three theories, 400 replications, 60 per group, effect 0.45, seed
+      20260829
+    decimals: 1
+    scale: 100
+- id: power-20
+  kind: computation
+  passage: At the modeled effect, 20 participants per group give power of 0.71 and about 25 per group
+    give 80 percent, and more are needed once several groups and several outcome families enter.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/power_curve_fine/0/power
+    reported: '0.71'
+    units: power
+    conditions: diagnostic interaction, effect 0.45, per-participant scan 20-30; 20 per group
+    decimals: 2
+- id: n80
+  kind: computation
+  passage: At the modeled effect, 20 participants per group give power of 0.71 and about 25 per group
+    give 80 percent, and more are needed once several groups and several outcome families enter.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/n_per_group_for_80pct_fine
+    reported: '25'
+    units: participants per group
+    conditions: diagnostic interaction, effect 0.45, per-participant scan 20-30
+    decimals: 0
+- id: hyst
+  kind: computation
+  passage: Hysteresis, the fraction of a trained configuration that survives after the driving perturbation
+    stops, is 55 percent of the trained gain in the model; it distinguishes a learned identity, which
+    persists, from a maintained illusion, which collapses with its stimulus.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /reachable/profiles/comparison/hysteresis_self
+    reported: '55'
+    units: percent
+    conditions: 'multiscale model: 30 training steps, 30 rest steps, decay 0.02, SELF/OTHER learning rates
+      0.16 vs 0.05'
+    decimals: 0
+    scale: 100
+- id: trained-ratio
+  kind: computation
+  passage: And the region reachable under training exceeds the fast-driven baseline by a factor of 2.7
+    in the model, so most of the phenotype space of interest cannot be reached in a single session and
+    requires longitudinal designs.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /reachable/trained_over_fast_ratio
+    reported: '2.7'
+    units: ratio
+    conditions: 'multiscale model: 30 training steps, 30 rest steps, decay 0.02, SELF/OTHER learning rates
+      0.16 vs 0.05'
+    decimals: 1
+- id: cross-n-closed
+  kind: computation
+  passage: Under the modeled learning-rate gap, the crossing reaches 80 percent power at about 11 participants
+    per group by the closed-form two-sample calculation, and simulated power at 15 per group is 0.90,
+    so a modest study could refute it.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /reachable/n_per_group_for_80pct_exact
+    reported: '11'
+    units: participants per group
+    conditions: 'multiscale model: 30 training steps, 30 rest steps, decay 0.02, SELF/OTHER learning rates
+      0.16 vs 0.05; closed-form two-sample calculation'
+    decimals: 0
+- id: cross-power-15
+  kind: computation
+  passage: Under the modeled learning-rate gap, the crossing reaches 80 percent power at about 11 participants
+    per group by the closed-form two-sample calculation, and simulated power at 15 per group is 0.90,
+    so a modest study could refute it.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /reachable/power_curve/0/power
+    reported: '0.90'
+    units: power
+    conditions: 'multiscale model: 30 training steps, 30 rest steps, decay 0.02, SELF/OTHER learning rates
+      0.16 vs 0.05; 15 per group, simulated'
+    decimals: 2
+- id: scope-25
+  kind: computation
+  passage: The proposal is that capability, embodiment, agency and identity are coordinates of one measurable
+    object; that the object is state-dependent and only partly explored; that the phenomena that look
+    strangest from outside occupy some of its most informative regions; and that the experiment that would
+    settle the current question is crossed and needs about 25 participants per group, compared with the
+    20 typical of the field, before multiple groups and outcome families are added.
+  evidence:
+    file: simulation/output/results.json
+    run_id: reachable
+    pointer: /design/n_per_group_for_80pct_fine
+    reported: '25'
+    units: participants per group
+    conditions: diagnostic interaction, effect 0.45, per-participant scan 20-30
+    decimals: 0
+- id: yamamura
+  kind: source
+  passage: The strongest reason to keep the coordinates separate is a 2026 experiment in which 24 participants
+    received virtual cat ears with congruent visual, tactile and auditory manipulation.
+  evidence:
+    citation_id: yamamura2026
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.3389/frvir.2026.1817800; the abstract reports 24 participants and visual,
+      haptic and auditory manipulation of cat ears.
+- id: yamamura-result
+  kind: source
+  passage: Subjective ownership of the ears rose and touch and sound were referred to them, while proprioceptive
+    drift did not change [@yamamura2026].
+  evidence:
+    citation_id: yamamura2026
+    locator: Abstract (Results)
+    verified: true
+    verification_note: The abstract reports increased ownership and referral of touch and audio to the
+      cat ears, and no significant proprioceptive-drift effects.
+- id: khan
+  kind: source
+  passage: A study the same year found that active and passive haptics increased the sense of embodiment
+    of virtual dog ears in 28 participants [@khan2026].
+  evidence:
+    citation_id: khan2026
+    locator: Abstract
+    verified: true
+    verification_note: 'arXiv:2606.26364 abstract (DataCite): 2x2 within-subjects study, n = 28, active
+      and passive haptics for virtual dog ears; passive haptics produced the strongest embodiment.'
+- id: mottelson
+  kind: source
+  passage: A meta-analysis of 111 articles also reports modest ownership effects, somewhat stronger agency
+    effects, and widespread problems with power and inconsistent terminology [@mottelson2023].
+  evidence:
+    citation_id: mottelson2023
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1145/3590767; the abstract: 111 articles, modest body ownership, slightly
+      higher agency, lack of statistical power and of clarity in terminology.'
+- id: roberts
+  kind: source
+  passage: Liking an animal and identifying as one are psychometrically separable, as a self-binding account
+    requires [@roberts2015].
+  evidence:
+    citation_id: roberts2015
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1080/08927936.2015.1069993; OpenAlex abstract: three-factor Species Connection
+      Scale separating liking, spiritual connection and identification.'
+- id: palmercooper
+  kind: source
+  passage: Among 243 participants across tulpamancy, ASMR and comparison groups, tulpamancers showed unusual
+    sensory experience without a general elevation in delusion-proneness [@palmercooper2021], and experienced
+    autonomy of characters also occurs among adult fiction writers [@taylor2003].
+  evidence:
+    citation_id: palmercooper2021
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1080/13546805.2021.1999798; OpenAlex abstract: 243 participants; higher
+      hallucination-proneness in the Tulpamancer+ group and no group differences in delusion-proneness.'
+- id: taylor
+  kind: source
+  passage: Among 243 participants across tulpamancy, ASMR and comparison groups, tulpamancers showed unusual
+    sensory experience without a general elevation in delusion-proneness [@palmercooper2021], and experienced
+    autonomy of characters also occurs among adult fiction writers [@taylor2003].
+  evidence:
+    citation_id: taylor2003
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.2190/FTG3-Q9T0-7U26-5Q5X; the abstract: 92% of fifty fiction writers reported
+      some illusion of independent agency of their characters.'
+- id: kranjec
+  kind: source
+  passage: Taken at face value, it contradicts the global-plasticity account.
+  evidence:
+    citation_id: kranjec2019
+    locator: Abstract
+    verified: true
+    verification_note: 'OpenAlex abstract of the eScholarship record 37x5162v: furries felt less subjective
+      embodiment than non-furries, supporting the identification hypothesis over the malleable-self hypothesis.'
+- id: samad
+  kind: source
+  passage: Body ownership can be modeled as inference about whether visual and proprioceptive evidence
+    share a common bodily cause [@samad2015].
+  evidence:
+    citation_id: samad2015
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1371/journal.pone.0117178; OpenAlex abstract applies the Bayesian causal
+      inference model to visual, proprioceptive and tactile stimuli and reproduces the RHI.
+- id: curran
+  kind: source
+  passage: An early prospective study of 30 febrile and 30 afebrile autistic children found transient
+    reductions on several aberrant-behavior measures during fever [@curran2007].
+  evidence:
+    citation_id: curran2007
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1542/peds.2007-0360; the abstract: 30 febrile children with 30 matched
+      afebrile controls, fewer aberrant behaviours on several subscales during fever, all improvements
+      transient.'
+- id: guterstam
+  kind: source
+  passage: Ownership extends to a third arm [@guterstam2011], to supernumerary robotic limbs whose incorporation
+    appears in peripersonal-space measures as well as questionnaires [@arai2022], and to avatars with
+    nonhuman morphology that participants learn to control [@won2015; @krekhov2019].
+  evidence:
+    citation_id: guterstam2011
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1371/journal.pone.0017208 (supernumerary hand illusion); Arai et al. 10.1038/s41598-022-13981-w
+      (embodiment of supernumerary robotic limbs with crossmodal-congruency peripersonal measure); Won
+      et al. 10.1111/jcc4.12107 (control of novel bodies); Krekhov et al. 10.1109/CIG.2019.8848005 (ownership
+      of animal avatars). Abstracts via Crossref/OpenAlex.
+- id: yee
+  kind: source
+  passage: 'Avatars also alter later behavior: people given taller or more attractive virtual bodies behave
+    differently afterward [@yee2007].'
+  evidence:
+    citation_id: yee2007
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1111/j.1468-2958.2007.00299.x; OpenAlex abstract: more attractive avatars
+      more intimate, taller avatars more confident in negotiation.'
+- id: seth
+  kind: source
+  passage: Bodily self-consciousness already decomposes into ownership, self-location and first-person
+    perspective, which dissociate under different manipulations [@blanke2015], and the owning self is
+    itself inferred, partly from interoceptive prediction [@seth2013].
+  evidence:
+    citation_id: seth2013
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1016/j.tics.2013.09.007; OpenAlex abstract: interoceptive inference sheds
+      light on body ownership and conscious selfhood.'
+- id: def-phenotype
+  kind: definition
+  passage: We call that space the reachable human phenotype, the set of behavioral and phenomenological
+    configurations a nervous system can enter through physiological change, sensory perturbation, learning
+    and context.
+  rationale: Defines the central object as a set of reachable configurations.
+- id: def-coordinates
+  kind: definition
+  passage: 'We propose ten coordinates: capability, body ownership, body schema, self-location, agency,
+    identity, memory access, perceptual organization, affect and reality testing.'
+  rationale: Stipulated factorisation, justified by dissociations in the literature.
+- id: def-safe
+  kind: definition
+  passage: The safely reachable phenotype is the set of configurations attainable under bounded, ethically
+    permissible perturbations within a horizon, a reachable set in the control-theoretic sense with safety
+    imposed as a hard constraint.
+  rationale: Control-theoretic reachable set with safety as a hard constraint.
+- id: asm-prior
+  kind: assumption
+  passage: We add a prior over morphological correspondence, so that the readiness with which an effector
+    is taken as part of the body depends on how well its form matches the participant's self-model.
+  rationale: The morphology-congruence prior is the model's one added parameter.
+- id: asm-theories
+  kind: assumption
+  passage: Three theories are under consideration.
+  rationale: Model selection is restricted to three generative theories.
+- id: asm-multiscale
+  kind: assumption
+  passage: The formalism separates a fast neural and physiological state driven by perturbation, stable
+    individual traits, and slowly learned generative-model parameters that accumulate from the fast state
+    and decay when it stops.
+  rationale: Timescale separation is a modelling choice.
+- id: int-chance
+  kind: interpretation
+  passage: With a single human effector, recovery is 0.51 against a chance level of 0.33.
+  rationale: Chance level is one in three theories.
+- id: int-same-param
+  kind: interpretation
+  passage: 'The same parameter produces both signs, and the prediction is testable: participants who bind
+    a human hand less should bind a congruent nonhuman body more.'
+  rationale: Follows from the single prior shift in the binding model.
+- id: int-could-not
+  kind: interpretation
+  passage: The one direct study uses this design, so it could not have distinguished the account it appears
+    to refute from the account it supports.
+  rationale: Reading of the human-only confusion matrix.
+- id: int-small-disc
+  kind: interpretation
+  passage: At small discrepancy the ownership change dominates and drift barely moves; at large discrepancy
+    drift dominates (Figure 1, right).
+  rationale: Drift/ownership gain ratio 0.41 at discrepancy 0.5 rising to 3.3 at 4 (results.json /binding/dissociation_sweep).
+- id: int-invariants
+  kind: interpretation
+  passage: The simulation, its 3 figures and every model number quoted above regenerate from one command
+    in the repository (`simulation/run_all.py`; seeded, bit for bit). 22 invariants fail the run if broken,
+    among them the human-only design's failure to discriminate and its misreading of congruent binding,
+    the crossed design's recovery, the monotone power curve, the per-participant scan bracketed by the
+    coarse grid, the closed-form sample size for the SELF and OTHER crossing, the two-sign property with
+    its neutral-morphology control, the ownership-over-drift regime at small discrepancy and its reversal
+    at large, positive but incomplete hysteresis, the crossed form of the double dissociation, and the
+    trained region exceeding the fast-driven baseline.
+  rationale: Count of entries in results.json /checks (22).
+- id: int-objection
+  kind: interpretation
+  passage: The strongest objection is that the simulations contain no people, so the numbers are properties
+    of assumptions.
+  rationale: States the epistemic status of every simulated number.
+- id: norm-community
+  kind: normative
+  passage: The communities discussed here are not a resource for cognitive science, and three commitments
+    follow.
+  rationale: Ethical commitments governing the proposed research.
+- id: norm-decisive
+  kind: normative
+  passage: The protocol's decisive test is an identity-congruent interaction in at least one subjective
+    measure and at least one behavioral, physiological or psychophysical measure, since a questionnaire
+    difference alone cannot distinguish a changed body model from a changed expectation.
+  rationale: Requirement for a behavioural or physiological measure alongside questionnaires.
+runs:
+- id: reachable
+  required: true
+  record: verification/reachable.json

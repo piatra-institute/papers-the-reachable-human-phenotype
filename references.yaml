@@ -1,0 +1,461 @@
+# CSL references with stable IDs; cite with Pandoc [@id] syntax.
+# Migrated from the legacy inline bibliography. Entries with a DOI were resolved through doi.org
+# content negotiation (CSL-JSON) and checked for year and title; others were matched in Crossref
+# or entered by hand. Provenance per entry is in sources.md.
+references:
+- id: arai2022
+  type: article-journal
+  title: Embodiment of supernumerary robotic limbs in virtual reality
+  author:
+  - given: Ken
+    family: Arai
+  - given: Hiroto
+    family: Saito
+  - given: Masaaki
+    family: Fukuoka
+  - given: Sachiyo
+    family: Ueda
+  - given: Maki
+    family: Sugimoto
+  - given: Michiteru
+    family: Kitazaki
+  - given: Masahiko
+    family: Inami
+  container-title: Scientific Reports
+  volume: '12'
+  DOI: 10.1038/s41598-022-13981-w
+  issued:
+    date-parts:
+    - - 2022
+  page: '9769'
+- id: blanke2015
+  type: article-journal
+  title: Behavioral, Neural, and Computational Principles of Bodily Self-Consciousness
+  author:
+  - given: Olaf
+    family: Blanke
+  - given: Mel
+    family: Slater
+  - given: Andrea
+    family: Serino
+  container-title: Neuron
+  volume: '88'
+  issue: '1'
+  page: 145-166
+  DOI: 10.1016/j.neuron.2015.09.029
+  issued:
+    date-parts:
+    - - 2015
+- id: blom2025
+  type: article-journal
+  title: A systematic review on clinical therianthropy and a proposal to conceptualize zoomorphism as
+    a diagnostic spectrum
+  author:
+  - given: Jan Dirk
+    family: Blom
+  - given: Brian A.
+    family: Sharpless
+  container-title: Neuroscience and Biobehavioral Reviews
+  volume: '174'
+  page: '106193'
+  DOI: 10.1016/j.neubiorev.2025.106193
+  URL: http://dx.doi.org/10.1016/j.neubiorev.2025.106193
+  issued:
+    date-parts:
+    - - 2025
+- id: botvinick1998
+  type: article-journal
+  title: Rubber Hands ‘Feel’ Touch That Eyes See
+  author:
+  - given: Matthew
+    family: Botvinick
+  - given: Jonathan
+    family: Cohen
+  container-title: Nature
+  volume: '391'
+  issue: '6669'
+  page: '756'
+  DOI: 10.1038/35784
+  issued:
+    date-parts:
+    - - 1998
+- id: byrne2022
+  type: article
+  title: Behavioral Responses to Fevers and Other Medical Events in Children With and Without ASD
+  author:
+  - given: Katherine
+    family: Byrne
+  - given: Shuting
+    family: Zheng
+  - given: Somer
+    family: Bishop
+  - given: Juliana
+    family: Boucher
+  - given: Sheila
+    family: Ghods
+  - given: So Hyun
+    family: Kim
+  - given: Catherine
+    family: Lord
+  DOI: 10.1101/2022.05.23.22275374
+  URL: http://dx.doi.org/10.1101/2022.05.23.22275374
+  issued:
+    date-parts:
+    - - 2022
+  container-title: medRxiv
+  number: 2022.05.23.22275374
+  genre: Preprint
+- id: clegg2019
+  type: article-journal
+  title: 'Therianthropy: Wellbeing, Schizotypy, and Autism in Individuals Who Self-Identify as Non-Human'
+  author:
+  - given: Helen
+    family: Clegg
+  - given: Roz
+    family: Collings
+  - given: Elizabeth C.
+    family: Roxburgh
+  container-title: Society and Animals
+  volume: '27'
+  issue: '4'
+  page: 403-426
+  DOI: 10.1163/15685306-12341540
+  issued:
+    date-parts:
+    - - 2019
+- id: curran2007
+  type: article-journal
+  title: Behaviors Associated With Fever in Children With Autism Spectrum Disorders
+  author:
+  - given: Laura K.
+    family: Curran
+  - given: Craig J.
+    family: Newschaffer
+  - given: Li-Ching
+    family: Lee
+  - given: Stephen O.
+    family: Crawford
+  - given: Michael V.
+    family: Johnston
+  - given: Andrew W.
+    family: Zimmerman
+  container-title: Pediatrics
+  volume: '120'
+  issue: '6'
+  page: e1386-e1392
+  DOI: 10.1542/peds.2007-0360
+  issued:
+    date-parts:
+    - - 2007
+- id: grivell2014
+  type: article-journal
+  title: An Interpretative Phenomenological Analysis of Identity in the Therian Community
+  author:
+  - given: Timothy
+    family: Grivell
+  - given: Helen
+    family: Clegg
+  - given: Elizabeth C.
+    family: Roxburgh
+  container-title: Identity
+  volume: '14'
+  issue: '2'
+  page: 113-135
+  DOI: 10.1080/15283488.2014.891999
+  issued:
+    date-parts:
+    - - 2014
+- id: guterstam2011
+  type: article-journal
+  title: The Illusion of Owning a Third Arm
+  author:
+  - given: Arvid
+    family: Guterstam
+  - given: Valeria I.
+    family: Petkova
+  - given: H. Henrik
+    family: Ehrsson
+  editor:
+  - given: Joseph
+    family: Najbauer
+    sequence: first
+    affiliation: []
+    role:
+    - vocabulary: crossref
+      role: editor
+  container-title: PLOS ONE
+  volume: '6'
+  issue: '2'
+  page: e17208
+  DOI: 10.1371/journal.pone.0017208
+  issued:
+    date-parts:
+    - - 2011
+- id: khan2026
+  type: article
+  title: 'Having Dog Ears ‘for Real’: Effects of Active and Passive Haptics on Embodying Non-Human Body
+    Parts in VR'
+  author:
+  - family: Khan
+    given: Omar A.
+  - family: Trinh
+    given: Bao Han
+  - family: Lisle
+    given: Lee
+  - family: Do
+    given: Tiffany D.
+  container-title: arXiv
+  number: arXiv:2606.26364
+  DOI: 10.48550/arXiv.2606.26364
+  URL: https://arxiv.org/abs/2606.26364
+  issued:
+    date-parts:
+    - - 2026
+- id: kranjec2019
+  type: paper-conference
+  title: Illusory Body Perception and Experience in Furries
+  author:
+  - given: Alexander
+    family: Kranjec
+  - given: Louis
+    family: Lamanna
+  - given: Erick Christopher
+    family: Guzman
+  - given: Courtney N.
+    family: Plante
+  - given: Stephen
+    family: Reysen
+  - given: Kathleen C.
+    family: Gerbasi
+  - given: Sharon E.
+    family: Roberts
+  - given: Elizabeth
+    family: Fein
+  container-title: Proceedings of the 41st Annual Meeting of the Cognitive Science Society
+  page: 596-602
+  publisher: Cognitive Science Society
+  URL: https://escholarship.org/uc/item/37x5162v
+  issued:
+    date-parts:
+    - - 2019
+- id: krekhov2019
+  type: paper-conference
+  title: The Illusion of Animal Body Ownership and Its Potential for Virtual Reality Games
+  author:
+  - given: Andrey
+    family: Krekhov
+  - given: Sebastian
+    family: Cmentowski
+  - given: Jens
+    family: Krüger
+  container-title: 2019 IEEE Conference on Games (CoG)
+  page: 1-8
+  publisher: IEEE
+  DOI: 10.1109/CIG.2019.8848005
+  issued:
+    date-parts:
+    - - 2019
+- id: luiggihernandez2025
+  type: article-journal
+  title: 'The jackal in the city: An empirical phenomenological study of embodied experience among therians
+    and otherkin.'
+  author:
+  - given: José G.
+    family: Luiggi-Hernández
+  - given: Elizabeth
+    family: Fein
+  - given: Jennifer
+    family: Bradley
+  - given: Jenna
+    family: Pelly
+  - given: Sharon E.
+    family: Roberts
+  - given: Kathleen C.
+    family: Gerbasi
+  container-title: The Humanistic Psychologist
+  volume: '53'
+  issue: '1'
+  page: 40-58
+  DOI: 10.1037/hum0000350
+  URL: http://dx.doi.org/10.1037/hum0000350
+  issued:
+    date-parts:
+    - - 2025
+- id: mottelson2023
+  type: article-journal
+  title: A Systematic Review and Meta-analysis of the Effectiveness of Body Ownership Illusions in Virtual
+    Reality
+  author:
+  - given: Aske
+    family: Mottelson
+  - given: Andreea
+    family: Muresan
+  - given: Kasper
+    family: Hornbæk
+  - given: Guido
+    family: Makransky
+  container-title: ACM Transactions on Computer-Human Interaction
+  volume: '30'
+  issue: '5'
+  page: 1-42
+  DOI: 10.1145/3590767
+  issued:
+    date-parts:
+    - - 2023
+- id: palmercooper2021
+  type: article-journal
+  title: 'Unusual experiences and their association with metacognition: investigating ASMR and Tulpamancy'
+  author:
+  - given: Emma
+    family: Palmer-Cooper
+  - given: Nicola
+    family: McGuire
+  - given: Abigail
+    family: Wright
+  container-title: Cognitive Neuropsychiatry
+  volume: '27'
+  issue: 2-3
+  page: 86-104
+  DOI: 10.1080/13546805.2021.1999798
+  issued:
+    date-parts:
+    - - 2021
+- id: roberts2015
+  type: article-journal
+  title: 'The Anthrozoomorphic Identity: Furry Fandom Members’ Connections to Nonhuman Animals'
+  author:
+  - given: Sharon E.
+    family: Roberts
+  - given: Courtney N.
+    family: Plante
+  - given: Kathleen C.
+    family: Gerbasi
+  - given: Stephen
+    family: Reysen
+  container-title: Anthrozoös
+  volume: '28'
+  issue: '4'
+  page: 533-548
+  DOI: 10.1080/08927936.2015.1069993
+  issued:
+    date-parts:
+    - - 2015
+- id: samad2015
+  type: article-journal
+  title: Perception of Body Ownership Is Driven by Bayesian Sensory Inference
+  author:
+  - given: Majed
+    family: Samad
+  - given: Albert Jin
+    family: Chung
+  - given: Ladan
+    family: Shams
+  editor:
+  - given: Mikhail A.
+    family: Lebedev
+    sequence: first
+    affiliation: []
+    role:
+    - vocabulary: crossref
+      role: editor
+  container-title: PLOS ONE
+  volume: '10'
+  issue: '2'
+  page: e0117178
+  DOI: 10.1371/journal.pone.0117178
+  issued:
+    date-parts:
+    - - 2015
+- id: seth2013
+  type: article-journal
+  title: Interoceptive inference, emotion, and the embodied self
+  author:
+  - given: Anil K.
+    family: Seth
+  container-title: Trends in Cognitive Sciences
+  volume: '17'
+  issue: '11'
+  page: 565-573
+  DOI: 10.1016/j.tics.2013.09.007
+  issued:
+    date-parts:
+    - - 2013
+- id: taylor2003
+  type: article-journal
+  title: 'The Illusion of Independent Agency: Do Adult Fiction Writers Experience Their Characters as
+    Having Minds of Their Own?'
+  author:
+  - given: Marjorie
+    family: Taylor
+  - given: Sara D.
+    family: Hodges
+  - given: Adèle
+    family: Kohányi
+  container-title: Imagination, Cognition and Personality
+  volume: '22'
+  issue: '4'
+  page: 361-380
+  DOI: 10.2190/FTG3-Q9T0-7U26-5Q5X
+  URL: http://dx.doi.org/10.2190/FTG3-Q9T0-7U26-5Q5X
+  issued:
+    date-parts:
+    - - 2003
+- id: won2015
+  type: article-journal
+  title: Homuncular Flexibility in Virtual Reality
+  author:
+  - given: Andrea Stevenson
+    family: Won
+  - given: Jeremy
+    family: Bailenson
+  - given: Jimmy
+    family: Lee
+  - given: Jaron
+    family: Lanier
+  container-title: Journal of Computer-Mediated Communication
+  volume: '20'
+  issue: '3'
+  page: 241-259
+  DOI: 10.1111/jcc4.12107
+  issued:
+    date-parts:
+    - - 2015
+- id: yamamura2026
+  type: article-journal
+  title: 'The imaginary cat ears illusion: an analysis of ownership for an avatar’s cat ears via visual–auditory–haptic
+    multimodal feedback in virtual reality'
+  author:
+  - given: Hiroo
+    family: Yamamura
+  - given: Ryota
+    family: Kondo
+  - given: Kuniharu
+    family: Sakurada
+  - given: Jean-Marie
+    family: Normand
+  - given: Maki
+    family: Sugimoto
+  container-title: Frontiers in Virtual Reality
+  volume: '7'
+  DOI: 10.3389/frvir.2026.1817800
+  URL: http://dx.doi.org/10.3389/frvir.2026.1817800
+  issued:
+    date-parts:
+    - - 2026
+  page: '1817800'
+- id: yee2007
+  type: article-journal
+  title: 'The Proteus Effect: The Effect of Transformed Self-Representation on Behavior'
+  author:
+  - given: Nick
+    family: Yee
+  - given: Jeremy
+    family: Bailenson
+  container-title: Human Communication Research
+  volume: '33'
+  issue: '3'
+  page: 271-290
+  DOI: 10.1111/j.1468-2958.2007.00299.x
+  issued:
+    date-parts:
+    - - 2007
